@@ -5,10 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
 
 <body>
+
+    <div class="tc-cont">
+        <div class="tc">
+            <div class="tc-hdr">
+                CALCULATE THE TIP
+            </div>
+            <div class="tc-body">
+                <div class="tc-q">How much was your bill?</div>
+                <div class="tc-input"><input type="number" placeholder="How much was your bill? ($)" id="billAmount">
+                </div>
+                <div class="tc-q">How many people sharing it?</div>
+                <div class="tc-input"><input type="number" placeholder="How many people sharing it?" id="peopleAmount">
+                </div>
+                <div class="tc-q">How was your service?</div>
+                <div class="option-cont">
+                    <select id="services">
+                        <option disabled selected value="0">-- Choose an Option --</option>
+                        <option value="0.3">30&#37; &#45; Outstanding</option>
+                        <option value="0.2">20&#37; &#45; Good</option>
+                        <option value="0.15">15&#37; &#45; It was OK</option>
+                        <option value="0.1">10&#37; &#45; Bad</option>
+                        <option value="0.05">5&#37; &#45; Terrible</option>
+                    </select>
+                </div>
+                <div class="tc-button">
+                    <button type="button" id="calculate" onclick="calculateTip()">Calculate</button>
+                </div>
+                <div class="tc-tip">
+                    <div id="tipText"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
